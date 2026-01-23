@@ -1,0 +1,61 @@
+{
+	"name": "atlascharts",
+	"version": "4.0.0",
+	"description": "Visualizations is a JavaScript module to support D3 visualizations in Atlas",
+	"main": "dist/atlascharts.umd.js",
+	"scripts": {
+		"build:amd:min": "npx google-closure-compiler --js=dist/atlascharts.js --js_output_file=dist/atlascharts.min.js",
+		"build:amd:dev": "node node_modules/requirejs/bin/r.js -o build/build-dev.js",
+		"build:umd": "webpack",
+		"build": "npm run build:amd:dev && npm run build:amd:min && npm run build:umd",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prettier": "npx prettier . --write",
+		"prettier-check": "npx prettier . --check"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CareEvolution/AtlasVisualizationsPublic.git"
+	},
+	"keywords": [
+		"Atlas",
+		"charts"
+	],
+	"contributors": [
+		{
+			"name": "Anne Marsan",
+			"email": "amarsan@careevolution.com"
+		}
+	],
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/CareEvolution/AtlasVisualizationsPublic/issues"
+	},
+	"homepage": "https://github.com/CareEvolution/AtlasVisualizationsPublic#readme",
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"d3": "^7.9.0",
+		"d3-tip": "^0.9.1",
+		"jquery": "^3.7.1",
+		"lodash": "^4.17.21",
+		"numeral": "^2.0.6",
+		"requirejs": "^2.3.7"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.28.5",
+		"@babel/preset-env": "^7.28.5",
+		"babel-loader": "^10.0.0",
+		"google-closure-compiler": "^20251108.0.0",
+		"prettier": "^3.6.2",
+		"terser-webpack-plugin": "^5.3.14",
+		"webpack": "^5.102.1",
+		"webpack-cli": "^6.0.1"
+	},
+	"peerDependencies": {
+		"d3": "^7.9.0",
+		"d3-tip": "^0.9.1",
+		"lodash": "^4.17.21",
+		"numeral": "^2.0.6"
+	}
+}
