@@ -2,6 +2,8 @@
 
 This software is based on the [OHDSI AtlasVisualizations Project](https://github.com/OHDSI/AtlasVisualizations). It is an archived snapshot, provided AS-IS, and is not actively maintained.
 
+This software uses the OHDSI AtlasVisualizations code as a starting point, and upgrades it to current versions (as of 12/1/2025) of all dependencies, including D3.
+
 # Visualizations
 
 Visualizations is a JavaScript module to support D3 visualizations in web-based applications. Built with d3 v7.
